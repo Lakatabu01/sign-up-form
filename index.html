@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up-form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="sidebar">
+        <div class="logo-background">
+            <img class="logo" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="logo">
+            <h2 class="norse">ODIN</h2>
+        </div>
+    </div>
+    <div class="main-page">
+        <div class="header">
+            <p>This is not a real online service. Lorem ipsum dolor sit amet consectetur,</br>
+                 adipisicing elit. Assumenda inventore corrupti ea ducimus </br>
+                 possimus sed iste quis accusantium eveniet earum, illo itaque impedit </br>
+                  saepe rerum ratione fugiat? Aut, fugiat tempore!</p>
+            <p>Lorem ipsum repudiandae eum?</p>
+        </div>
+        <div class="form">
+            <h4>Lets do this!</h4>
+            <form action="" method="post">
+                <div class="section">
+                <div>
+                    <label for="first-name">
+                        <span>First name</span> 
+                    <input required type="text" id="first-name" name="First-name" placeholder="John">
+                     </label>
+                </div>
+
+                 <div>
+                    <label for="Last-name">
+                        <span>Last Name</span>
+                    <input required type="text" id="Last-name" name="Last-name" placeholder="Watkins">
+                     </label>
+                </div>
+                </div>
+                <div class="section">
+                <div>
+                    <label for="email">
+                        <span>Email</span>
+                        <input required type="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" id="email" name="email" placeholder="john@odinmail.com">
+                    </label>
+                </div>
+                    
+                <div>
+                    <label for="tel">
+                    <span>Phone Number</span>
+                    <input  required placeholder="23475643453" type="tel" id="tel" name="phone-number" pattern="[0-9]{10,11}">
+                    </label>
+                </div>
+                </div>
+                <div class="section" >
+                    <div>
+                        <label for="password">
+                        <span>Password</span>
+                        <input required type="password" id="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                    <p class="instruct">Minimum eight characters, </br>at least one letter and one number</p>    
+                    </label>
+                    </div>
+
+
+                     <div>
+                        <label for="confirm-password">
+                        <span>Confirm Password</span>
+                        <input required onkeyup="check()" type="password" id="confirm-password" name="confirm-password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                            <p id="msg"></p>
+                    </label>
+                    </div>
+                </div>
+
+        </div>
+        <div class="footer">
+            <button type="submit">Create account</button>
+            <p>Already have an account? <a href="#">log in</a></p>
+        </div>
+    </form>
+    </div>
+</div>
+<script>
+    function check() {
+    let pass = document.getElementById("password")
+    let confirmPass = document.getElementById("confirm-password")
+    let msg = document.getElementById("msg")
+    if (pass.value !== confirmPass.value ){
+        msg.style.color = "red"
+        msg.style.fontSize = "10px"
+        msg.textContent= "Passwords do not match"
+    } else{
+        msg.textContent= ""
+    }
+    }
+    </script>
+</body>
+
+</html>

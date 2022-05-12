@@ -1,0 +1,127 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: norse;
+    src: url(Norse-Bold.otf);
+}
+.norse{
+    font-family: norse;
+}
+.container, .logo-background{
+    display: flex;
+}
+h4{
+    color: black;
+    align-self: flex-start;
+}
+.container{
+    margin: 0px;
+}
+.main-page{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.sidebar{
+    background: no-repeat url("unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-background{
+    background-color: black;
+    opacity: 0.6;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    height: 20%;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
+.header, .footer{
+    display: block;
+    background-color: rgb(243, 243, 243);
+    height: 20%;
+    width: 100%;
+    padding: 30px 30px 30px 60px;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+input[type="password"]:invalid{
+    outline: 1px solid red;
+}
+input[type]{
+    display: block;
+    border: 1px solid #E5E7EB ;
+}
+
+.form{
+    padding-left: 60px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60%;
+
+}
+.section > div:last-child{
+    margin-left: 80px;
+}
+button{
+    color: white;
+    background-color: #596D48;
+    border: 2px solid #596D48;
+    height: 35px;
+    width: 140px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 2px black;
+    cursor: pointer;
+}
+h2{
+    color: white;
+    font-size: 60px;
+}
+input:focus{
+    outline:1px solid blue;
+    box-shadow: 2px 2px 2px black;
+}
+button:hover{
+    background-color: white;
+    color: #596D48 ;
+    border-color: #596D48;
+    font-weight: bolder;
+}
+.header{
+    font-weight: bolder;
+}
+a{
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.instruct{
+    color: red;
+    opacity: 0;
+    font-size: 10px ;
+}
+input[type="password"]:invalid + p{
+opacity: 1;
+}
+
+/*
+need to use the appropriate fonts as instructed 
+*/
